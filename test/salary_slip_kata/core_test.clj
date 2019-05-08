@@ -17,7 +17,9 @@
 ;; Tax payable: £600.00
 
 (deftest salary-slip-test
-  (let [employee [1233 "John J Doe" 24000]]
+  (let [employee {:employee-id         1233
+                  :employee-name       "John J Doe"
+                  :annual-gross-salary 24000}]
     (testing "Produce a salary slip for a person"
       (is (= {:employee-id        1233
               :employee-name      "John J Doe"
